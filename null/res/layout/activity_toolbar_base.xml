@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_app_bar" android:layout_width="fill_parent" android:layout_height="65.0dip" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/back" android:padding="5.0dip" android:layout_width="45.0dip" android:layout_height="45.0dip" android:src="@drawable/neo_ic_back" android:layout_marginStart="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.art.generator.base.widget.YoloTextView android:textSize="18.0dip" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="no content" android:layout_marginStart="10.0dip" app:layout_constraintBottom_toBottomOf="@id/back" app:layout_constraintStart_toEndOf="@id/back" app:layout_constraintTop_toTopOf="@id/back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@id/content_wrapper_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/cl_app_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

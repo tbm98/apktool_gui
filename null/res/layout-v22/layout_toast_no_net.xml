@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="@drawable/ai_art_toast_bg" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" android:paddingVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/neo_ic_save_error" />
+    <com.art.generator.base.widget.YoloTextView android:textSize="17.0dip" android:textColor="@color/color_07080D" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_net" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

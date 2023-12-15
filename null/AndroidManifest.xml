@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.art.generator.ai.moe" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-permission android:maxSdkVersion="32" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="29" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <queries>
+        <intent>
+            <action android:name="com.appsflyer.referrer.INSTALL_PROVIDER"/>
+        </intent>
+        <intent>
+            <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission android:name="com.art.generator.ai.moe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.art.generator.ai.moe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="@xml/appsflyer_backup_rules" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.art.generator.ArtApplication" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:resizeableActivity="false" android:screenOrientation="portrait" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:name="com.art.generator.ai.moe.gzpjya0.Ojolwa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.gzpjya0.Msfaob1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.gzpjya0.Umjzrc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.dwcmbb1.Ktlhta0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.dwcmbb1.Kbsmlb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.dwcmbb1.Yxqhkc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.ntjujc2.Tjjlxa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.ntjujc2.Xvljab1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.ntjujc2.Klsqxc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.opmzwd3.Irluea0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.opmzwd3.Psuhnb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.opmzwd3.Ftwfqc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.vfvxxe4.Anjpia0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.vfvxxe4.Dgpglb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.vfvxxe4.Xbfkic2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.injojf5.Pybeka0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.injojf5.Hlywmb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.injojf5.Phtcwc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tfdssg6.Feweja0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tfdssg6.Qzxknb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tfdssg6.Ccldgc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.unxnth7.Rcwaka0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.unxnth7.Qqhsfb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.unxnth7.Osvwhc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.keteti8.Pcazma0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.keteti8.Fcgymb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.keteti8.Wpzwqc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rqxlvj9.Emtpla0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rqxlvj9.Bdfgqb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rqxlvj9.Rymwic2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zzmysk10.Nrqbfa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zzmysk10.Rdqhdb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zzmysk10.Edvqtc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.evimgl11.Zcsuaa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.evimgl11.Jckqeb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.evimgl11.Nkatzc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bkzymm12.Jlccta0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bkzymm12.Bpsngb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bkzymm12.Bmsiic2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zqdnen13.Kxciqa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zqdnen13.Zapgdb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.zqdnen13.Faxrtc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.cibveo14.Kkndpa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.cibveo14.Ecwdib1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.cibveo14.Xqkmgc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.nabpop15.Yqorxa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.nabpop15.Tvbmeb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.nabpop15.Owsqrc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bdvkkq16.Eyxada0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bdvkkq16.Dmjppb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bdvkkq16.Rcgaic2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.obuvsr17.Vlvqma0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.obuvsr17.Ailfjb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.obuvsr17.Vtyltc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sahgas18.Wwusga0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sahgas18.Wmrcab1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sahgas18.Enjthc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.lhgfpt19.Lcbkia0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.lhgfpt19.Vzfxsb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.lhgfpt19.Rtwxsc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.udnzsu20.Lgvtja0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.udnzsu20.Prhleb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.udnzsu20.Xcwqcc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tolxtv21.Umdzaa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tolxtv21.Kqaogb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.tolxtv21.Nppmlc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rskapw22.Vfgxwa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rskapw22.Rivicb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.rskapw22.Udzxjc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bhchcx23.Jrqhza0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bhchcx23.Frnrwb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bhchcx23.Driiic2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bekkfy24.Enxpxa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bekkfy24.Woobnb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.bekkfy24.Negouc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.izrzqz25.Tfoiva0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.izrzqz25.Laotvb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.izrzqz25.Jgrmwc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eulxqab26.Hqaida0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eulxqab26.Buaekb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eulxqab26.Auggec2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eiaxtbb27.Yrvssa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eiaxtbb27.Tmramb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.eiaxtbb27.Krkdac2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sbofqcb28.Danmka0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sbofqcb28.Zstggb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.sbofqcb28.Fmrnvc2Activity"/>
+        <activity android:name="com.art.generator.ai.moe.fftiidb29.Znogpa0Activity"/>
+        <activity android:name="com.art.generator.ai.moe.fftiidb29.Exatcb1Activity"/>
+        <activity android:name="com.art.generator.ai.moe.fftiidb29.Kxovfc2Activity"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.home.HomeActivity" android:screenOrientation="portrait" android:theme="@style/LightBackgroundTheme"/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.art.generator.SplashActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.base.base.BrowserToolbarActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.login.SignInActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.login.AccountActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.login.DeleteAccountActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.mine.ImageDetails" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:name="com.art.generator.module.templates.TemplateEditorActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:name="com.art.generator.module.video_template.VideoTemplateEditorActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.mine.setting.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.feedback.FeedbackActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.purchase.PurchaseActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.purchase.VideoPurchaseActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.templates.TemplateCategoryActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.art.generator.HotAppActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.art.generator.module.aiart.AiArtGenerateActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:name="com.art.generator.module.aiart.AiArtGuideActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.media.MediaActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.aiart.PromptInputActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:launchMode="singleTask" android:name="com.art.generator.module.aiart.InspirationsActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@string/admob_pub_id"/>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_notification_small_icon"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/white"/>
+        <service android:exported="false" android:name="com.art.generator.fcm.CloudMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.art.generator.ai.moe.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:launchMode="singleTop" android:name="com.yoadx.handler.hotsplash.HotSplashPageActivity" android:screenOrientation="portrait" android:theme="@style/Splash"/>
+        <activity android:launchMode="singleTop" android:name="com.yoadx.handler.hotsplash.VpnRunningHintDialogActivity" android:theme="@style/dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:hardwareAccelerated="true" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:launchMode="singleTask" android:name="com.yoadx.yoadx.ad.ui.activity.YoAdxAdActivity" android:screenOrientation="portrait" android:theme="@style/YoAdxCustomInterstitialStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.yoadx.yoadx.ad.ui.activity.NativeAdActivity" android:screenOrientation="portrait" android:theme="@style/YoAdxCustomInterstitialStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.yoadx.yoadx.ad.ui.browser.CommonBrowserActivity" android:screenOrientation="portrait" android:theme="@style/YoAdxCustomInterstitialStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.yoadx.yoadx.ad.ui.browser.JumpGPBrowserActivity" android:screenOrientation="portrait"/>
+        <provider android:authorities="com.art.generator.ai.moe.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="com.yolo.iap.initializer.YoloIapInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="android.ext.adservices" android:required="false"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.art.generator.ai.moe.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
+        <provider android:authorities="com.art.generator.ai.moe.applovininitprovider" android:exported="false" android:initOrder="101" android:name="com.applovin.sdk.AppLovinInitProvider"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.applovin.adview.AppLovinFullscreenActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.applovin.adview.AppLovinFullscreenThemedActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.sdk.AppLovinWebViewActivity"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerDetailActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerTcfInfoListActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerTcfStringActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerTcfVendorDetailListActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.mediation.MaxDebuggerWaterfallKeywordsActivity" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.creative.MaxCreativeDebuggerActivity" android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity" android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"/>
+        <service android:exported="false" android:name="com.applovin.impl.adview.activity.FullscreenAdService" android:stopWithTask="false"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.art.generator.ai.moe.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.art.generator.ai.moe.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.OutOfContextTestingActivity"/>
+        <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/gma_ad_services_config"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.art.generator.ai.moe.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:multiprocess="true" android:name="com.blankj.utilcode.util.UtilsTransActivity" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:authorities="com.art.generator.ai.moe.utilcode.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.blankj.utilcode.util.UtilsFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <service android:exported="false" android:name="com.blankj.utilcode.util.MessengerUtils$ServerService">
+            <intent-filter>
+                <action android:name="com.art.generator.ai.moe.messenger"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.github.razerdp.com.art.generator.ai.moe.BasePopupInitializer" android:exported="false" android:multiprocess="true" android:name="razerdp.basepopup.BasePopupInitializer"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11003"/>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity" android:theme="@style/tt_landing_page"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity" android:theme="@style/tt_landing_page"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity" android:theme="@style/tt_landing_page"/>
+        <activity android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTWebsiteActivity" android:screenOrientation="portrait" android:theme="@style/tt_privacy_landing_page"/>
+        <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTAppOpenAdActivity" android:theme="@style/tt_app_open_ad_no_animation"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity" android:theme="@style/tt_full_screen_new"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity" android:theme="@style/tt_full_screen_new"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity" android:theme="@style/tt_full_screen_new"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity" android:theme="@style/tt_full_screen_new"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity" android:theme="@style/tt_full_screen_interaction"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity" android:theme="@style/tt_full_screen_interaction"/>
+        <meta-data android:name="aia-compat-api-min-version" android:value="1"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:name="com.mbridge.msdk.reward.player.MBRewardVideoActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="5.1.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|orientation" android:excludeFromRecents="true" android:exported="false" android:name="com.mbridge.msdk.activity.MBCommonActivity" android:theme="@style/mbridge_transparent_common_activity_style"/>
+        <activity android:name="com.mbridge.msdk.out.LoadingActivity"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+    </application>
+</manifest>

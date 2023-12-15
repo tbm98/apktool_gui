@@ -1,0 +1,140 @@
+[
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1tp5kdz.webp",
+    "name": "No style",
+    "prompt": "(Masterpiece:1.3), (best quality:1.3), official art, 8k, intricate details, high details, high resolution,",
+    "style_id": "4g9yj"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1c4y2se.webp",
+    "name": "Portrait",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail Skin, Perfect Skin, RAM Photo, Real Photo,",
+    "style_id": "1fawq9v"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1sidn75.webp",
+    "name": "Anime",
+    "prompt": "masterpiece, best quality, masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper,",
+    "style_id": "u0zj2c"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/c51wkq.webp",
+    "name": "Babes",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail Skin, Perfect Skin, RAM Photo, Real Photo,",
+    "style_id": "1q7fok2"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/13yaday.webp",
+    "name": "Asian",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail,",
+    "style_id": "1hua8v7"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/vez734.webp",
+    "name": "Oda Non",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail, <lora:Oda_Non_Style-KK77-V2:0.7>, <lora:fashigirl-v6-nai:0.6>,official art,extremely detailed CG unity 8k wallpaper, perfect lighting,Colorful, Bright_Front_face_Lighting,White skin,(masterpiece:1.0),(best_quality:1.0), ultra high res,4K,ultra-detailed,photography, 8K, HDR, highres, absurdres:1.2, Kodak portra 400, film grain, blurry background, bokeh:1.2, lens flare, (vibrant_color:1.2),professional photograph,",
+    "style_id": "1xaipsc"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/gthf89.webp",
+    "name": "Cartoon",
+    "prompt": "masterpiece, best quality, masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper,",
+    "style_id": "83vvxp"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/x18obm.webp",
+    "name": "Comics",
+    "prompt": "\"masterpiece, best quality, masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper, detailed, professional comic book style, flat colors, prominent outlines and linework,",
+    "style_id": "vagmr"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/14t95sb.webp",
+    "name": "GTA",
+    "prompt": "gtav style, masterpiece, best quality, best quality,official art,",
+    "style_id": "133ek3y"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1e2spkm.webp",
+    "name": "CyberPunk",
+    "prompt": "masterpiece, best quality, 8k, intricate details, high detail, soft lighting, Realistic, CyberpunkAI, neon, <lora:CyberPunkAI:0.8>",
+    "style_id": "1kj1962"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1hyln3q.webp",
+    "name": "SteamPunk",
+    "prompt": "masterpiece, best quality, 8k, intricate details, high detail, Realistic, soft lighting, steampunkai, <lora:steampunkai:1>",
+    "style_id": "8obpoq"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1k4q5yj.webp",
+    "name": "3D redering",
+    "prompt": "3dmm style, 3d, realistic, high-quality, 3D realistic works, ultra-high details, 4k, masterpiece, best quality, best quality, official art, <lora:3d-rendering-style:1>",
+    "style_id": "1y727k7"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/11yxuml.webp",
+    "name": "Van Gogh",
+    "prompt": "vg, van gogh style, masterpiece, best quality, 8k, hyperdetailed, ultra detailed, illustration,  <lora:vgv1:0.8> city,starry night,floor-to-ceiling windows, 1girl,smile,yellow hair, standing, from behind,office uniform,office",
+    "style_id": "vnclq6"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1h28uu7.webp",
+    "name": "Pen Sketch",
+    "prompt": "penSketch_style, ink sketch, masterpiece, best quality, best quality,official art,extremely detailed CG unity 8k wallpaper, <lora:pensketch_without_pen_lora:0.8>",
+    "style_id": "58zowv"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1xouzno.webp",
+    "name": "Pixel Art",
+    "prompt": "(masterpiece:1.2), (best quality), (ultra detailed), (8k, 4k, intricate),(full-body-shot:1), (highly detailed:1.2),(detailed face:1.2), (detailed background),detailed landscape, (dynamic pose:1.2), ((pixelart)), <lora:pixel:0.7>",
+    "style_id": "d6gheh"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1e72rgx.webp",
+    "name": "Disney",
+    "prompt": "masterpiece, best quality, 8k, high detail, ultra detailed, finely detailed skin, sharp focus, (cinematic lighting), soft lighting, dynamic angle,",
+    "style_id": "ghc61s"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/30sjih.webp",
+    "name": "Synthwavepunk",
+    "prompt": "masterpiece, best quality, masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper, (nvinkpunk:0.8), (snthwve style:1),",
+    "style_id": "704kk8"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1ef60dq.webp",
+    "name": "Mechanical",
+    "prompt": "masterpiece, best quality, 8k, hyper quality, high detail, highres, mecha musume, mechanical parts,robot joints,headgear, ray tracing, <lora:AMechaSSS:0.8>",
+    "style_id": "l3t6sz"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/fkxfs3.webp",
+    "name": "Fire",
+    "prompt": "masterpiece, best quality, 8k, intricate details, high detail, Realistic, soft lighting, ((Hasselblad photography)), sharp focus, (cinematic lighting), on fire,<lora:on_fire:0.7>",
+    "style_id": "170tc7d"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/jjcnsk.webp",
+    "name": "Zombies",
+    "prompt": "zombie, horror \\(theme\\), masterpiece, best quality, 8k, intricate details, high detail, Realistic, soft lighting, ((Hasselblad photography)), sharp focus, (cinematic lighting), <lora:zombie_v1.3:1>",
+    "style_id": "nmhqxc"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/3s6x1.webp",
+    "name": "Kids",
+    "prompt": "kid style, masterpiece, best quality, 8k, intricate details, high detail, illustration, cartoon, cute style, Chibi, <lora:COOLKIDS_MERGE_V2.5:1>",
+    "style_id": "svtkyx"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/grbe2j.webp",
+    "name": "Ivory Gold",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail,IvoryGoldAI, <lora:IvoryGoldAIv2:1>, <lora:aperture-v2-style:0.5>",
+    "style_id": "183vhdb"
+  },
+  {
+    "convert_image": "https://d1d8hu0v8al7j8.cloudfront.net/image/1ydefcj.webp",
+    "name": "Blind box",
+    "prompt": "(masterpiece:1.3), (best quality:1.3), official art, Super Detailed, High Detail, Soft Lighting, 8K, High Resolution, High Detail,chibi,cute, <lora:blindbox_v1_mix:1>",
+    "style_id": "1tpd31u"
+  }
+]

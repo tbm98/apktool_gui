@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/splash_ads_main_ads_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.yoadx.yoadx.ad.ui.MaterialRippleLayout android:id="@id/splash_ads_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:mrl_rippleColor="@color/materialGrey" app:mrl_rippleDelayClick="false" app:mrl_rippleFadeDuration="250" app:mrl_rippleOverlay="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/splash_ads_transparent_black" android:paddingLeft="10.0dip" android:paddingTop="17.0dip" android:paddingRight="10.0dip" android:paddingBottom="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <TextView android:textSize="19.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/splash_ads_action_str" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="2" android:layout_weight="10.0" />
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/splash_ads_action_description" android:background="@drawable/splash_ads_action_btn_bg" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingRight="15.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+            </LinearLayout>
+        </com.yoadx.yoadx.ad.ui.MaterialRippleLayout>
+        <RelativeLayout android:id="@id/rl_splash_bottom" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/img_launcher" android:layout_width="65.0dip" android:layout_height="65.0dip" />
+                <TextView android:textSize="22.0dip" android:textColor="@color/title" android:id="@id/txt_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.yoadx.yoadx.ad.ui.MaterialRippleLayout android:id="@id/spalsh_ads_skip_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" app:mrl_rippleColor="@color/text_gray" app:mrl_rippleDelayClick="false" app:mrl_rippleFadeDuration="250" app:mrl_rippleOverlay="true">
+                <TextView android:textSize="13.0dip" android:textColor="@color/title" android:gravity="center" android:id="@id/splash_ads_count_down_str" android:background="@drawable/splash_ads_count_down_bg" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="%ds" />
+            </com.yoadx.yoadx.ad.ui.MaterialRippleLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/custom_toast_layout" android:background="#d0000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rating_stars_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="100.0dip" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@mipmap/lemon_gp_star_img" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@mipmap/lemon_gp_star_img" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@mipmap/lemon_gp_star_img" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@mipmap/lemon_gp_star_img" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@mipmap/lemon_gp_star_img" />
+    </LinearLayout>
+    <ImageView android:id="@id/rating_gesture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/lemon_guide_gesture_icon" android:layout_alignTop="@id/rating_stars_layout" android:layout_alignRight="@id/rating_stars_layout" android:layout_alignEnd="@id/rating_stars_layout" />
+    <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/rating_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/google_play_slides_up_tip" android:layout_above="@id/rating_stars_layout" android:layout_centerHorizontal="true" />
+    <FrameLayout android:id="@id/translation_layout" android:layout_width="wrap_content" android:layout_height="140.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/rating_text" android:layout_centerHorizontal="true">
+        <View android:layout_gravity="bottom|center" android:id="@id/translation_circle" android:background="@drawable/rating_mask" android:layout_width="40.0dip" android:layout_height="70.0dip" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/translation_mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/lemon_gp_toast_scroll_point" />
+    </FrameLayout>
+</RelativeLayout>

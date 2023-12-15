@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_video_template_editor" app:startDestination="@id/videoMediaSelectorFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="VideoMediaSelectorFragment" android:name="com.art.generator.module.video_template.VideoMediaSelectorFragment" android:id="@id/videoMediaSelectorFragment">
+        <action android:id="@id/actionVideoPhotoClipFragment" app:destination="@id/videoPhotoClipFragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:label="VideoPhotoClipFragment" android:name="com.art.generator.module.video_template.VideoPhotoClipFragment" android:id="@id/videoPhotoClipFragment">
+        <argument android:name="localMedia" app:argType="com.art.generator.data.model.media.LocalMedia" app:nullable="false" />
+        <action android:id="@id/actionVideoGenderSelectorFragment" app:destination="@id/videoGenderSelectorFragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:label="VideoGenderSelectorFragment" android:name="com.art.generator.module.video_template.VideoGenderSelectorFragment" android:id="@id/videoGenderSelectorFragment">
+        <action android:id="@id/actionVideoTemplateProcessFragment" app:destination="@id/videoTemplateProcessFragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/videoPhotoClipFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:label="VideoTemplateProcessFragment" android:name="com.art.generator.module.video_template.VideoTemplateProcessFragment" android:id="@id/videoTemplateProcessFragment">
+        <action android:id="@id/actionVideoTemplateResultFragment" app:destination="@id/videoTemplateResultFragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/videoMediaSelectorFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:label="VideoTemplateResultFragment" android:name="com.art.generator.module.video_template.VideoTemplateResultFragment" android:id="@id/videoTemplateResultFragment" />
+</navigation>

@@ -1,0 +1,89 @@
+{
+  "default_ad_config": {
+    "ad_max_cache_count": 4,
+    "video_max_cache_count": 4,
+    "ad_native_max_cache_count": 1,
+    "ad_show_min_delay_time": 10,
+    "show_fb_loading_time": 1500,
+    "common_interstitial_ad_cloud": [
+      {
+        "platform_cache_type": 100001,
+        "id": 100001,
+        "loadDelaySec": 0,
+        "name": "neo_i_h",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/5657485626",
+        "weight": 1
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 100001,
+        "loadDelaySec": 0,
+        "name": "neo_i_m",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/1900922060",
+        "weight": 2
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 100001,
+        "loadDelaySec": 0,
+        "name": "neo_i_l",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/9583970964",
+        "weight": 3
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 100001,
+        "loadDelaySec": 0,
+        "name": "neo_i_l2",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/5302194533",
+        "weight": 4
+      }
+    ],
+    "extra_interstitial_ad_cloud": [],
+    "common_native_ad_cloud": [],
+    "extra_native_ad_cloud": [],
+    "common_reward_ad_cloud": [
+      {
+        "platform_cache_type": 100001,
+        "id": 300001,
+        "loadDelaySec": 0,
+        "name": "neo_reward_h",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/1116896389",
+        "weight": 1
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 300001,
+        "loadDelaySec": 0,
+        "name": "neo_reward_m",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/4343208418",
+        "weight": 2
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 300001,
+        "loadDelaySec": 0,
+        "name": "neo_reward_l",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/6156372597",
+        "weight": 3
+      },
+      {
+        "platform_cache_type": 100001,
+        "id": 300001,
+        "loadDelaySec": 0,
+        "name": "neo_reward_l2",
+        "showDelayMin": 0.0,
+        "unit": "ca-app-pub-6896123121341902/6997712717",
+        "weight": 4
+      }
+    ],
+    "extra_reward_ad_cloud": []
+  }
+}

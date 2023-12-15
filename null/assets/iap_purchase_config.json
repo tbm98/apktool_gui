@@ -1,0 +1,151 @@
+﻿{
+  "pop_up": {
+    "new_user": {
+      "subscription_list": []
+    },
+    "holiday": {
+      "subscription_list": []
+    },
+    "default": {
+      "subscription_list": []
+    }
+  },
+  "subscription_page": {
+    "new_user": {
+      "subscription_list": []
+    },
+    "holiday": {
+      "subscription_list": [
+        {
+          "sub_id": "54050515",
+          "duration": 0,
+          "start_time": "",
+          "end_time": "",
+          "raw_price": 39.99,
+          "price": 9.99,
+          "discount": "",
+          "client_product_title": "100 AI Video",
+          "strike_through_price": "$39.99",
+          "converted_price": "",
+          "promote_description": "Valid for one month",
+          "weight": 0,
+          "type": "lifetime",
+          "product_id": "buy_onetime_230907_999",
+          "product_name": "9.99视频制作",
+          "product_type": "products",
+          "is_hot": 0,
+          "is_trial": 0,
+          "button_title": "Continue"
+        },
+        {
+          "sub_id": "18732480",
+          "duration": 0,
+          "start_time": "",
+          "end_time": "",
+          "raw_price": 9.99,
+          "price": 1.99,
+          "discount": "",
+          "client_product_title": "5  AI Video",
+          "strike_through_price": "$9.99",
+          "converted_price": "",
+          "promote_description": "Valid for one week",
+          "weight": 0,
+          "type": "lifetime",
+          "product_id": "buy_onetime_230907_1.99",
+          "product_name": "1.99视频制作",
+          "product_type": "products",
+          "is_hot": 0,
+          "is_trial": 0,
+          "button_title": "Continue"
+        }
+      ],
+      "title": "",
+      "title_image": [
+        "https://storage.googleapis.com/yolobase-dash/creative/9675d7e3f8fdba827a967eb6948a60d3b6a9065e.png"
+      ],
+      "pop_up_type": "",
+      "media_content": [
+        "https://storage.googleapis.com/yolobase-dash/creative/9675d7e3f8fdba827a967eb6948a60d3b6a9065e.png"
+      ],
+      "media_content_dark": [],
+      "media_type": "pic",
+      "promotion_name": "视频套餐",
+      "group_index": "",
+      "main_desc": "",
+      "sub_desc": "",
+      "version": 11,
+      "duration": 0,
+      "button_title": "",
+      "start_time": "",
+      "end_time": ""
+    },
+    "default": {
+      "subscription_list": [
+        {
+          "sub_id": "90675227",
+          "duration": 0,
+          "start_time": "",
+          "end_time": "",
+          "raw_price": 199.99,
+          "price": 39.99,
+          "discount": "80%",
+          "client_product_title": "$39.99, Lifetime",
+          "strike_through_price": "$199.99",
+          "converted_price": "",
+          "promote_description": "Billed Once All Life",
+          "weight": 0,
+          "type": "lifetime",
+          "product_id": "sub_lifetime_vip_230818_3999",
+          "product_name": "永久会员 - 通用40",
+          "product_type": "products",
+          "is_hot": 0,
+          "is_trial": 0,
+          "button_title": "Continue"
+        },
+        {
+          "sub_id": "44041114",
+          "duration": 0,
+          "start_time": "",
+          "end_time": "",
+          "raw_price": 9.99,
+          "price": 4.99,
+          "discount": "",
+          "client_product_title": "$4.99/Week",
+          "strike_through_price": "",
+          "converted_price": "$0.71/day",
+          "promote_description": "Billed weekly at $0.71 per day",
+          "weight": 0,
+          "type": "week",
+          "product_id": "sub_week_vip_230724_499",
+          "product_name": "周订阅 - 默认",
+          "product_type": "subscriptions",
+          "is_hot": 0,
+          "is_trial": 0,
+          "button_title": "Start Plan"
+        }
+      ],
+      "title": "default",
+      "title_image": [
+        "https://storage.googleapis.com/yolobase-dash/creative/12fed39bde34f1118475991dfe02f827f1287f21.mp4"
+      ],
+      "pop_up_type": "",
+      "media_content": [
+        "https://storage.googleapis.com/yolobase-dash/creative/12fed39bde34f1118475991dfe02f827f1287f21.mp4"
+      ],
+      "media_content_dark": [],
+      "media_type": "video",
+      "promotion_name": "默认订阅页__2个套餐",
+      "group_index": "",
+      "main_desc": "",
+      "sub_desc": "",
+      "version": 2,
+      "duration": 86400,
+      "button_title": "default",
+      "start_time": "",
+      "end_time": ""
+    }
+  },
+  "random_discount": {
+    "subscription_list": []
+  }
+}

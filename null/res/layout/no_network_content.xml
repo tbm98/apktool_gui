@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.art.generator.base.widget.RippleConstraintLayout android:background="@drawable/bg_no_network" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/icon" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/neo_ic_no_network" android:layout_marginStart="13.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.art.generator.base.widget.YoloTextView android:textSize="13.0dip" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_error_to_setting_tips" android:layout_marginStart="10.5dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/rightIcon" android:layout_width="27.0dip" android:layout_height="27.0dip" android:src="@drawable/neo_ic_nonet_next" android:layout_marginEnd="15.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.art.generator.base.widget.RippleConstraintLayout>

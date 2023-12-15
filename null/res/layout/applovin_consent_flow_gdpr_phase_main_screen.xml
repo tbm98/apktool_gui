@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_view" android:background="@drawable/applovin_consent_flow_gdpr_rounded_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/applovin_sdk_consentFlowGdprControlsViewHeight" android:elevation="10.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title_textview" style="@style/com.applovin.mediation.ConsentFlow.TitleTextView" />
+            <TextView android:id="@id/message_textview" android:layout_marginBottom="20.0dip" android:text="@string/applovin_gdpr_main_screen_message" android:layout_marginStart="@dimen/applovin_sdk_consentFlowGdprHorizontalMargin" android:layout_marginEnd="@dimen/applovin_sdk_consentFlowGdprHorizontalMargin" style="@style/com.applovin.mediation.ConsentFlow.BodyTextView" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="18.0dip" android:paddingEnd="18.0dip">
+                <Switch android:id="@id/personalized_advertising_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:textOn="" android:textOff="" android:minHeight="48.0dip" android:thumb="@drawable/applovin_consent_flow_gdpr_flow_switch_thumb" android:track="@drawable/applovin_consent_flow_gdpr_flow_switch_track" android:layout_marginEnd="16.0dip" />
+                <TextView android:textColorLink="@color/applovin_sdk_consentFlowGdprTextColor" android:layout_gravity="center_vertical" android:id="@id/personalized_advertising_switch_textview" android:layout_marginRight="24.0dip" android:layout_marginEnd="24.0dip" style="@style/com.applovin.mediation.ConsentFlow.BodyTextView" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="18.0dip" android:paddingEnd="18.0dip">
+                <Switch android:id="@id/analytics_purposes_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:textOn="" android:textOff="" android:minHeight="48.0dip" android:thumb="@drawable/applovin_consent_flow_gdpr_flow_switch_thumb" android:track="@drawable/applovin_consent_flow_gdpr_flow_switch_track" android:layout_marginEnd="16.0dip" />
+                <TextView android:textColorLink="@color/applovin_sdk_consentFlowGdprTextColor" android:layout_gravity="center_vertical" android:id="@id/analytics_purposes_switch_textview" android:layout_marginRight="24.0dip" android:layout_marginEnd="24.0dip" style="@style/com.applovin.mediation.ConsentFlow.BodyTextView" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="18.0dip" android:paddingEnd="18.0dip">
+                <Switch android:id="@id/privacy_policy_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:textOn="" android:textOff="" android:minHeight="48.0dip" android:thumb="@drawable/applovin_consent_flow_gdpr_flow_switch_thumb" android:track="@drawable/applovin_consent_flow_gdpr_flow_switch_track" android:layout_marginEnd="16.0dip" />
+                <TextView android:textColorLink="@color/applovin_sdk_consentFlowGdprTextColor" android:layout_gravity="center_vertical" android:id="@id/privacy_policy_switch_textview" android:layout_marginRight="24.0dip" android:layout_marginEnd="24.0dip" style="@style/com.applovin.mediation.ConsentFlow.BodyTextView" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/controls_view" android:layout_width="fill_parent" android:layout_height="@dimen/applovin_sdk_consentFlowGdprControlsViewHeight">
+        <Button android:enabled="false" android:id="@id/continue_button" android:layout_marginTop="8.0dip" android:text="@string/applovin_continue_button_text" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" style="@style/com.applovin.mediation.ConsentFlow.PositiveButton" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/learn_more_button" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:text="@string/applovin_gdpr_main_screen_learn_more_button_text" style="@style/com.applovin.mediation.ConsentFlow.NeutralButton" />
+    </LinearLayout>
+</FrameLayout>

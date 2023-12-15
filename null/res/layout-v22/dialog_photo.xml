@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.art.generator.view.photoview.PhotoView android:id="@id/photoView" android:background="@color/color_141519" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/back" android:background="@drawable/bg_sd_feedback" android:padding="6.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="12.5dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="12.5dip" android:src="@drawable/neo_ic_edit_cloese_2" android:layout_marginHorizontal="15.0dip" android:layout_marginVertical="12.5dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/tabBar" android:background="@drawable/bg_191c29_20_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabTemplates" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_weight="1.0">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/tab_templates" />
+            <com.art.generator.base.widget.YoloTextView android:textSize="12.0dip" android:textColor="@color/tab_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="@string/tab_templates" app:yoloTextStyle="middle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabAiArt" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_weight="1.0">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/tab_ai_art" />
+            <com.art.generator.base.widget.YoloTextView android:textSize="12.0dip" android:textColor="@color/tab_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="@string/tab_ai_art" app:yoloTextStyle="middle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabMine" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_weight="1.0">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/tab_mine" />
+            <com.art.generator.base.widget.YoloTextView android:textSize="12.0dip" android:textColor="@color/tab_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="@string/tab_my_space" app:yoloTextStyle="middle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
