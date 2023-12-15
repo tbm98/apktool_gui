@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="50.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.art.generator.base.widget.YoloTextView android:textSize="16.0dip" android:textColor="@color/tab_text_color" android:gravity="center" android:id="@id/tabName" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" app:yoloTextStyle="middle" />
-    <com.art.generator.base.widget.YoloTextView android:textSize="10.0dip" android:textColor="@color/white" android:layout_gravity="end|center|top" android:id="@id/promptCount" android:background="@drawable/bg_rectangle_radius_200" android:paddingLeft="4.5dip" android:paddingRight="4.5dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.5dip" android:backgroundTint="@color/color_FF3AAD" app:yoloTextStyle="middle" />
-</FrameLayout>

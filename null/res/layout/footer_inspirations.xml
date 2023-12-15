@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.appcompat.widget.AppCompatImageView android:id="@id/notLoadingStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/neo_img_home_more" android:scaleType="centerCrop" android:adjustViewBounds="true" />
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/more" android:background="@drawable/bg_more_inspirations" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_centerInParent="true" android:paddingStart="10.0dip" android:paddingEnd="8.0dip">
-        <com.art.generator.base.widget.YoloTextView android:textSize="13.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/textStyleMore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ai_art_see_more" />
-        <androidx.appcompat.widget.AppCompatImageView android:id="@id/imgStyleMore" android:layout_width="13.0dip" android:layout_height="12.0dip" android:src="@drawable/neo_home_ic_more_2" />
-    </LinearLayout>
-</RelativeLayout>

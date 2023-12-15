@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.art.generator.base.widget.RippleConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.AppCompatImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toTopOf="@id/platform" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.art.generator.base.widget.YoloTextView android:textSize="13.0dip" android:textColor="@android:color/white" android:id="@id/platform" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon" />
-</com.art.generator.base.widget.RippleConstraintLayout>

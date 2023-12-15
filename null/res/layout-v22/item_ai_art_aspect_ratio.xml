@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:id="@id/background" android:background="@drawable/bg_ratio_item" android:layout_width="72.0dip" android:layout_height="38.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="8.0dip" android:paddingStart="9.0dip" android:layout_marginHorizontal="5.0dip" android:layout_marginVertical="8.0dip">
-        <androidx.appcompat.widget.AppCompatImageView android:id="@id/icon" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/neo_ic_size_1x1" android:scaleType="fitCenter" android:layout_marginEnd="4.0dip" />
-        <com.art.generator.base.widget.YoloTextView android:textSize="15.0dip" android:textColor="@color/color_8F92AA" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1:1" android:includeFontPadding="false" />
-    </LinearLayout>
-    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="end|center|top" android:id="@id/pro" android:layout_width="35.0dip" android:layout_height="16.0dip" android:src="@drawable/neo_ic_ratio_hd" />
-</FrameLayout>
