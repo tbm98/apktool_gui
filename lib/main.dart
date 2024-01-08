@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:apktool_gui/local_storage.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
@@ -15,12 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'APKTOOL GUI',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'APKTOOL GUI'),
     );
   }
 }
@@ -35,15 +36,77 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String? debugKeyPath;
+  String? zipalignPath;
+  String? apksignerPath;
   String? apkPath;
   String? workingDir;
   String? apkFileName;
   String? buildPath;
+
+  @override
+  void initState() {
+    super.initState();
+    Future(() async {
+      debugKeyPath = await LocalStorage.getString('debug_key_path');
+      zipalignPath = await LocalStorage.getString('zipalign_path');
+      apksignerPath = await LocalStorage.getString('apksigner_path');
+      setState(() {});
+    });
+  }
+
   List<(String, bool)> logs = [];
   final scrollController = ScrollController();
 
+  void pickDebugKeyFile() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      initialDirectory: (await getDownloadsDirectory())?.path,
+    );
+
+    if (result != null) {
+      File file = File(result.files.single.path!);
+      setState(() {
+        debugKeyPath = file.path;
+      });
+      LocalStorage.setString('debug_key_path', debugKeyPath!);
+    } else {
+      // User canceled the picker
+    }
+  }
+
+  void pickZipalignFile() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      initialDirectory: (await getDownloadsDirectory())?.path,
+    );
+
+    if (result != null) {
+      File file = File(result.files.single.path!);
+      setState(() {
+        zipalignPath = file.path;
+      });
+      LocalStorage.setString('zipalign_path', zipalignPath!);
+    } else {
+      // User canceled the picker
+    }
+  }
+
+  void pickApksignerFile() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      initialDirectory: (await getDownloadsDirectory())?.path,
+    );
+
+    if (result != null) {
+      File file = File(result.files.single.path!);
+      setState(() {
+        apksignerPath = file.path;
+      });
+      LocalStorage.setString('apksigner_path', apksignerPath!);
+    } else {
+      // User canceled the picker
+    }
+  }
+
   void pickApkFile() async {
-    print((await getDownloadsDirectory())?.path);
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['apk'],
@@ -77,143 +140,183 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void decompile() async {
-    final apkFile = apkPath?.split('/').last;
-    final result = await Process.start(
-      'apktool',
-      ['d', apkFile.toString(), '-f'],
-      workingDirectory: workingDir,
-    );
-    result.stdout.transform(utf8.decoder).forEach((value) {
-      logs.add((value.trim(), true));
+    try {
+      logs.add(('Decompile apk', true));
+      setState(() {});
+      final apkFile = apkPath?.split('/').last;
+      final result = await Process.start(
+        'apktool',
+        ['d', apkFile.toString(), '-f'],
+        workingDirectory: workingDir,
+      );
+      result.stdout.transform(utf8.decoder).forEach((value) {
+        logs.add((value.trim(), true));
+        setState(() {});
+        Future.delayed(const Duration(milliseconds: 100), () {
+          scrollController.jumpTo(scrollController.position.maxScrollExtent);
+        });
+      });
+      result.stderr.transform(utf8.decoder).forEach((value) {
+        logs.add((value.trim(), false));
+        setState(() {});
+        Future.delayed(const Duration(milliseconds: 100), () {
+          scrollController.jumpTo(scrollController.position.maxScrollExtent);
+        });
+      });
+      final exitCode = await result.exitCode;
+      logs.add((
+        '------------------------------------Exit code: $exitCode-------------------------------------',
+        exitCode == 0
+      ));
       setState(() {});
       Future.delayed(const Duration(milliseconds: 100), () {
         scrollController.jumpTo(scrollController.position.maxScrollExtent);
       });
-    });
-    result.stderr.transform(utf8.decoder).forEach((value) {
-      logs.add((value.trim(), false));
+    } catch (e, s) {
+      logs.add((
+        '------------------------------------EXCEPTION-------------------------------------\n$e\n------------------------------------EXCEPTION-END-------------------------------------',
+        false
+      ));
       setState(() {});
-      Future.delayed(const Duration(milliseconds: 100), () {
-        scrollController.jumpTo(scrollController.position.maxScrollExtent);
-      });
-    });
-    final exitCode = await result.exitCode;
-    logs.add((
-      '------------------------------------Exit code: $exitCode-------------------------------------',
-      exitCode == 0
-    ));
-    setState(() {});
-    Future.delayed(const Duration(milliseconds: 100), () {
-      scrollController.jumpTo(scrollController.position.maxScrollExtent);
-    });
+    }
   }
 
   Future<int> buildApk(String buildDir) async {
-    final result = await Process.start(
-      'apktool',
-      ['b', '.', '-o', 'built.apk', '-f'],
-      workingDirectory: buildDir,
-    );
-    result.stdout.transform(utf8.decoder).forEach((value) {
-      logs.add((value.trim(), true));
+    try {
+      logs.add(('Build apk', true));
+      setState(() {});
+      final result = await Process.start(
+        'apktool',
+        ['b', '.', '-o', 'built.apk', '-f'],
+        workingDirectory: buildDir,
+      );
+      result.stdout.transform(utf8.decoder).forEach((value) {
+        logs.add((value.trim(), true));
+        setState(() {});
+        Future.delayed(const Duration(milliseconds: 100), () {
+          scrollController.jumpTo(scrollController.position.maxScrollExtent);
+        });
+      });
+      result.stderr.transform(utf8.decoder).forEach((value) {
+        logs.add((value.trim(), false));
+        setState(() {});
+        Future.delayed(const Duration(milliseconds: 100), () {
+          scrollController.jumpTo(scrollController.position.maxScrollExtent);
+        });
+      });
+      final exitCode = await result.exitCode;
+      logs.add((
+        '------------------------------------Exit code: $exitCode-------------------------------------',
+        exitCode == 0
+      ));
       setState(() {});
       Future.delayed(const Duration(milliseconds: 100), () {
         scrollController.jumpTo(scrollController.position.maxScrollExtent);
       });
-    });
-    result.stderr.transform(utf8.decoder).forEach((value) {
-      logs.add((value.trim(), false));
+      return exitCode;
+    } catch (e, s) {
+      logs.add((
+        '------------------------------------EXCEPTION-------------------------------------\n$e\n------------------------------------EXCEPTION-END-------------------------------------',
+        false
+      ));
       setState(() {});
-      Future.delayed(const Duration(milliseconds: 100), () {
-        scrollController.jumpTo(scrollController.position.maxScrollExtent);
-      });
-    });
-    final exitCode = await result.exitCode;
-    logs.add((
-      '------------------------------------Exit code: $exitCode-------------------------------------',
-      exitCode == 0
-    ));
-    setState(() {});
-    Future.delayed(const Duration(milliseconds: 100), () {
-      scrollController.jumpTo(scrollController.position.maxScrollExtent);
-    });
-    return exitCode;
+      return 1;
+    }
   }
 
   Future<int> zipalign(String buildDir) async {
-    logs.add(('Zip apk', true));
-    setState(() {});
-    final result = await Process.run(
-      'zipalign',
-      ['-f', '-v', '4', 'built.apk', 'ziped.apk'],
-      workingDirectory: buildDir,
-    );
-    final exitCode = result.exitCode;
-    logs.add((
-      '------------------------------------Exit code: $exitCode-------------------------------------',
-      exitCode == 0
-    ));
-    setState(() {});
-    Future.delayed(const Duration(milliseconds: 100), () {
-      scrollController.jumpTo(scrollController.position.maxScrollExtent);
-    });
-    return exitCode;
+    try {
+      logs.add(('Zip apk', true));
+      setState(() {});
+      final result = await Process.run(
+        '$zipalignPath',
+        ['-f', '-v', '4', 'built.apk', 'signed.apk'],
+        workingDirectory: buildDir,
+      );
+      final exitCode = result.exitCode;
+      logs.add((
+        '------------------------------------Exit code: $exitCode-------------------------------------',
+        exitCode == 0
+      ));
+      setState(() {});
+      Future.delayed(const Duration(milliseconds: 100), () {
+        scrollController.jumpTo(scrollController.position.maxScrollExtent);
+      });
+      return exitCode;
+    } catch (e, s) {
+      logs.add((
+        '------------------------------------EXCEPTION-------------------------------------\n$e\n------------------------------------EXCEPTION-END-------------------------------------',
+        false
+      ));
+      setState(() {});
+      return 1;
+    }
   }
 
   Future<int> signApk(String buildDir) async {
-    logs.add(('Sign apk', true));
-    setState(() {});
-    final result = await Process.run(
-      '/home/tbm98/Android/Sdk/build-tools/34.0.0/apksigner',
-      [
-        'sign',
-        '--ks',
-        '/home/tbm98/.android/debug.keystore',
-        '--ks-pass',
-        'pass:android',
-        '--v',
-        'ziped.apk'
-      ],
-      workingDirectory: buildDir,
-    );
-    logs.add((result.stdout.toString().trim(), true));
-    logs.add((result.stderr.toString().trim(), false));
-    final exitCode = result.exitCode;
-    logs.add((
-      '------------------------------------Exit code: $exitCode-------------------------------------',
-      exitCode == 0
-    ));
-    setState(() {});
-    Future.delayed(const Duration(milliseconds: 100), () {
-      scrollController.jumpTo(scrollController.position.maxScrollExtent);
-    });
-    return exitCode;
+    try {
+      logs.add(('Sign apk', true));
+      setState(() {});
+      final result = await Process.run(
+        '$apksignerPath',
+        ['sign', '--ks', '$debugKeyPath', '--ks-pass', 'pass:android', '--v', 'signed.apk'],
+        workingDirectory: buildDir,
+      );
+      logs.add((result.stdout.toString().trim(), true));
+      logs.add((result.stderr.toString().trim(), false));
+      final exitCode = result.exitCode;
+      logs.add((
+        '------------------------------------Exit code: $exitCode-------------------------------------',
+        exitCode == 0
+      ));
+      setState(() {});
+      Future.delayed(const Duration(milliseconds: 100), () {
+        scrollController.jumpTo(scrollController.position.maxScrollExtent);
+      });
+      return exitCode;
+    } catch (e, s) {
+      logs.add((
+        '------------------------------------EXCEPTION-------------------------------------\n$e\n------------------------------------EXCEPTION-END-------------------------------------',
+        false
+      ));
+      setState(() {});
+      return 1;
+    }
   }
 
   Future<int> installApk(String buildDir) async {
-    logs.add(('Install apk', true));
-    setState(() {});
-    final result = await Process.run(
-      'adb',
-      [
-        'install',
-        '-r',
-        '$buildDir/ziped.apk',
-      ],
-      workingDirectory: buildDir,
-    );
-    logs.add((result.stdout.toString().trim(), true));
-    logs.add((result.stderr.toString().trim(), false));
-    final exitCode = result.exitCode;
-    logs.add((
-      '------------------------------------Exit code: $exitCode-------------------------------------',
-      exitCode == 0
-    ));
-    setState(() {});
-    Future.delayed(const Duration(milliseconds: 100), () {
-      scrollController.jumpTo(scrollController.position.maxScrollExtent);
-    });
-    return exitCode;
+    try {
+      logs.add(('Install apk', true));
+      setState(() {});
+      final result = await Process.run(
+        'adb',
+        [
+          'install',
+          '-r',
+          '$buildDir/signed.apk',
+        ],
+        workingDirectory: buildDir,
+      );
+      logs.add((result.stdout.toString().trim(), true));
+      logs.add((result.stderr.toString().trim(), false));
+      final exitCode = result.exitCode;
+      logs.add((
+        '------------------------------------Exit code: $exitCode-------------------------------------',
+        exitCode == 0
+      ));
+      setState(() {});
+      Future.delayed(const Duration(milliseconds: 100), () {
+        scrollController.jumpTo(scrollController.position.maxScrollExtent);
+      });
+      return exitCode;
+    } catch (e, s) {
+      logs.add((
+        '------------------------------------EXCEPTION-------------------------------------\n$e\n------------------------------------EXCEPTION-END-------------------------------------',
+        false
+      ));
+      setState(() {});
+      return 1;
+    }
   }
 
   @override
@@ -230,6 +333,51 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'debug.keystore: $debugKeyPath',
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    OutlinedButton(
+                        onPressed: () {
+                          pickDebugKeyFile();
+                        },
+                        child: const Text('Select')),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'zipalign: $zipalignPath',
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    OutlinedButton(
+                        onPressed: () {
+                          pickZipalignFile();
+                        },
+                        child: const Text('Select')),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'apksigner: $apksignerPath',
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    OutlinedButton(
+                        onPressed: () {
+                          pickApksignerFile();
+                        },
+                        child: const Text('Select')),
+                  ],
+                ),
                 Row(
                   children: [
                     Expanded(
