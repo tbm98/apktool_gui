@@ -36,9 +36,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String? debugKeyPath;
-  String? zipalignPath;
-  String? apksignerPath;
+  final debugKeyPath = TextEditingController();
+  final zipalignPath = TextEditingController();
+  final apksignerPath = TextEditingController();
+  final apktoolPath = TextEditingController();
   String? apkPath;
   String? workingDir;
   String? apkFileName;
@@ -48,63 +49,16 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Future(() async {
-      debugKeyPath = await LocalStorage.getString('debug_key_path');
-      zipalignPath = await LocalStorage.getString('zipalign_path');
-      apksignerPath = await LocalStorage.getString('apksigner_path');
+      debugKeyPath.text = await LocalStorage.getString('debug_key_path') ?? '';
+      zipalignPath.text = await LocalStorage.getString('zipalign_path') ?? '';
+      apksignerPath.text = await LocalStorage.getString('apksigner_path') ?? '';
+      apktoolPath.text = await LocalStorage.getString('apktool_path') ?? '';
       setState(() {});
     });
   }
 
   List<(String, bool)> logs = [];
   final scrollController = ScrollController();
-
-  void pickDebugKeyFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      initialDirectory: (await getDownloadsDirectory())?.path,
-    );
-
-    if (result != null) {
-      File file = File(result.files.single.path!);
-      setState(() {
-        debugKeyPath = file.path;
-      });
-      LocalStorage.setString('debug_key_path', debugKeyPath!);
-    } else {
-      // User canceled the picker
-    }
-  }
-
-  void pickZipalignFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      initialDirectory: (await getDownloadsDirectory())?.path,
-    );
-
-    if (result != null) {
-      File file = File(result.files.single.path!);
-      setState(() {
-        zipalignPath = file.path;
-      });
-      LocalStorage.setString('zipalign_path', zipalignPath!);
-    } else {
-      // User canceled the picker
-    }
-  }
-
-  void pickApksignerFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      initialDirectory: (await getDownloadsDirectory())?.path,
-    );
-
-    if (result != null) {
-      File file = File(result.files.single.path!);
-      setState(() {
-        apksignerPath = file.path;
-      });
-      LocalStorage.setString('apksigner_path', apksignerPath!);
-    } else {
-      // User canceled the picker
-    }
-  }
 
   void pickApkFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
@@ -145,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
       setState(() {});
       final apkFile = apkPath?.split('/').last;
       final result = await Process.start(
-        'apktool',
+        apktoolPath.text,
         ['d', apkFile.toString(), '-f'],
         workingDirectory: workingDir,
       );
@@ -186,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
       logs.add(('Build apk', true));
       setState(() {});
       final result = await Process.start(
-        'apktool',
+        apktoolPath.text,
         ['b', '.', '-o', 'built.apk', '-f'],
         workingDirectory: buildDir,
       );
@@ -229,7 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
       logs.add(('Zip apk', true));
       setState(() {});
       final result = await Process.run(
-        '$zipalignPath',
+        zipalignPath.text,
         ['-f', '-v', '4', 'built.apk', 'signed.apk'],
         workingDirectory: buildDir,
       );
@@ -258,8 +212,8 @@ class _MyHomePageState extends State<MyHomePage> {
       logs.add(('Sign apk', true));
       setState(() {});
       final result = await Process.run(
-        '$apksignerPath',
-        ['sign', '--ks', '$debugKeyPath', '--ks-pass', 'pass:android', '--v', 'signed.apk'],
+        apksignerPath.text,
+        ['sign', '--ks', debugKeyPath.text, '--ks-pass', 'pass:android', '--v', 'signed.apk'],
         workingDirectory: buildDir,
       );
       logs.add((result.stdout.toString().trim(), true));
@@ -284,6 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  // TODO: path for adb
   Future<int> installApk(String buildDir) async {
     try {
       logs.add(('Install apk', true));
@@ -333,50 +288,37 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        'debug.keystore: $debugKeyPath',
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    OutlinedButton(
-                        onPressed: () {
-                          pickDebugKeyFile();
-                        },
-                        child: const Text('Select')),
-                  ],
+                TextFormField(
+                  controller: debugKeyPath,
+                  onChanged: (value) {
+                    LocalStorage.setString('debug_key_path', value);
+                  },
+                  decoration: const InputDecoration(
+                      labelText: 'Debug keystore path', border: InputBorder.none),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        'zipalign: $zipalignPath',
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    OutlinedButton(
-                        onPressed: () {
-                          pickZipalignFile();
-                        },
-                        child: const Text('Select')),
-                  ],
+                TextFormField(
+                  controller: zipalignPath,
+                  onChanged: (value) {
+                    LocalStorage.setString('zipalign_path', value);
+                  },
+                  decoration:
+                      const InputDecoration(labelText: 'Zipalign path', border: InputBorder.none),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        'apksigner: $apksignerPath',
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    OutlinedButton(
-                        onPressed: () {
-                          pickApksignerFile();
-                        },
-                        child: const Text('Select')),
-                  ],
+                TextFormField(
+                  controller: apktoolPath,
+                  onChanged: (value) {
+                    LocalStorage.setString('apktool_path', value);
+                  },
+                  decoration:
+                      const InputDecoration(labelText: 'Apktool path', border: InputBorder.none),
+                ),
+                TextFormField(
+                  controller: apksignerPath,
+                  onChanged: (value) {
+                    LocalStorage.setString('apksigner_path', value);
+                  },
+                  decoration:
+                      const InputDecoration(labelText: 'Apksigner path', border: InputBorder.none),
                 ),
                 Row(
                   children: [
@@ -395,7 +337,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           icon: const Icon(Icons.file_open_rounded)),
                     ),
                     OutlinedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           decompile();
                         },
                         child: const Text('Decompile')),
@@ -423,9 +365,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             final exitCode2 = await zipalign(buildPath.toString());
                             if (exitCode2 == 0) {
                               final exitCode3 = await signApk(buildPath.toString());
-                              if (exitCode3 == 0) {
-                                installApk(buildPath.toString());
-                              }
+                              // if (exitCode3 == 0) {
+                              //   installApk(buildPath.toString());
+                              // }
                             }
                           }
                         },
@@ -449,11 +391,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: pickApkFile,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
         ),
       ),
     );
